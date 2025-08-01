@@ -1,6 +1,10 @@
 # Node modules
 node_modules/
 
+ml_models/venv
+ml_models/disease_model.h5
+ml_models/pest_model.h5
+ml_models/.python-version
 # Logs
 logs
 *.log
