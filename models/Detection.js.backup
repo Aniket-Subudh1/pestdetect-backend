@@ -31,7 +31,11 @@ const detectionSchema = new mongoose.Schema({
     },
     description: String,
     treatment: String,
-    pesticide: String
+    pesticide: {
+      name: String,
+      dosage: String,
+      type: String
+    }
   },
   location: {
     latitude: Number,
@@ -47,7 +51,6 @@ const detectionSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Index for better query performance
 detectionSchema.index({ user: 1, createdAt: -1 });
 detectionSchema.index({ type: 1 });
 detectionSchema.index({ 'result.detectedClass': 1 });
